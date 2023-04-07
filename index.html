@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,36 +9,43 @@
     <script type="text/javascript" src="script.js"></script>
     <title>Document</title>
 </head>
-<body>
-    <h1 id="latest-release">Latest Releases</h1>
 
-    <section id="banner">
-        <div id="banner-content">
-            <img id="banner-image" src="assets/png/Cover Art.png">
-            <div id="banner-info">
-                <p id="banner-topic">Trending Release</p>
-                <h2 id="banner-heading">Song Title</h2>
-                <p id="banner-artist">Artist Name</p>
-                <div id="banner-buttons">
-                    <button>Play</button>
-                    <button>Download</button>
+<body>
+    <div id="black-block"></div>
+    <main>
+        <h1 id="latest-release">Latest Releases</h1>
+
+        <section id="banner">
+            <div id="banner-content">
+                <img id="banner-image" src="assets/png/Cover Art.png">
+                <div id="banner-info">
+                    <p id="banner-topic">Trending Release</p>
+                    <h2 id="banner-heading">Song Title</h2>
+                    <p id="banner-artist">Artist Name</p>
+                    <div id="banner-buttons">
+                        <button>Play</button>
+                        <button>Download</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="music-filters">
-        <input class="music-filter" id="" />
-        <select class="music-filter" ></select>
-        <div class="music-filter-special" id="track-type-container">
-            <button class="filter-track-type" id="type-typical">Typical</button>
-            <button class="filter-track-type" id="type-instrumental">Instrumental</button>
-        </div>
-    </section>
+        <section id="music-filters">
+            <input class="music-filter" id="" />
+            <select class="music-filter"></select>
+            <div class="music-filter-special" id="track-type-container">
+                <button class="filter-track-type" id="type-typical">Typical</button>
+                <button class="filter-track-type" id="type-instrumental">Instrumental</button>
+            </div>
+        </section>
 
-    <section id="music-selection">
-        <output id="selection-output"></output>
-    </section>
+        <section id="music-selection">
+            <output id="selection-output"></output>
+        </section>
+
+    </main>
+
 
 </body>
+
 </html>

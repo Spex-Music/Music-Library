@@ -53,7 +53,13 @@ function sp3x_start(event){
     console.log('sp3x_start', event.type, Date())  
     const selection_output = document.getElementById('selection-output')
 
-    const song_box = sp3x_make_song_box();
-    selection_output.appendChild(song_box)
+    
+    let songs = 0;
+    const size = 120;
+    for (songs = 0; songs < size; songs++){
+        const song_box = sp3x_make_song_box();
+        selection_output.appendChild(song_box)
+    }
+    
 }
 document.addEventListener("DOMContentLoaded", sp3x_start)

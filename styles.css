@@ -157,6 +157,13 @@ h1#latest-release {
     margin: 20px 0px 28px 46px;
 }
 
+div#black-block {
+    position: fixed;
+    background-color: black;
+    width: 84px;
+    height: 1024px;
+}
+
 section#banner {
     overflow: auto;
     position: relative;
@@ -273,6 +280,11 @@ button#type-instrumental {
 section#music-selection {
     background-color: #F2F2F2;
     padding: 26px 0px 26px 46px;
+}
+output#selection-output {
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+    gap: 60px;
 }
 
 .song-container {
