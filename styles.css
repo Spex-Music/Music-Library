@@ -1,60 +1,148 @@
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
 /* 
  * End of Reset
  */
 html {
     font-family: sans-serif;
 }
+
 h1 {
-  font-size: 2.5rem;
+    font-size: 2.5rem;
 }
 
 h2 {
@@ -68,42 +156,44 @@ p {
 h1#latest-release {
     margin: 20px 0px 28px 46px;
 }
+
 section#banner {
     overflow: auto;
     position: relative;
-  
+
 }
+
 section#banner::before {
     content: "";
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     z-index: -1;
-  
+
     display: block;
-    background-image:  url("assets/png/Background.png"), linear-gradient( transparent 0%,transparent 90%, white 100%);
+    background-image: url("assets/png/Background.png"), linear-gradient(transparent 0%, transparent 90%, white 100%);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
 
-    filter:blur(4px);
-    height: 216px; 
+    filter: blur(4px);
+    height: 216px;
 
-    background-position: center; 
+    background-position: center;
 
-    background-size:cover;
+    background-size: cover;
     width: 100%;
 
-  
+
     -webkit-filter: blur(5px);
     -moz-filter: blur(5px);
     -o-filter: blur(5px);
     -ms-filter: blur(5px);
     filter: blur(5px);
-  }
+}
 
-div#banner-content{
+div#banner-content {
     padding: 30px 60px 36px 60px;
-    display:flex;
+    display: flex;
     gap: 90px;
 }
 
@@ -120,12 +210,12 @@ p#banner-artist {
 }
 
 div#banner-buttons {
-    margin-top: 22px;   
+    margin-top: 22px;
 }
 
 div#banner-buttons button {
 
-    color:white;
+    color: white;
     padding: 1px 14px;
     background-color: black;
     border: none;
@@ -135,15 +225,17 @@ div#banner-buttons button {
     line-height: 18px;
 
 }
+
 section#music-filters {
     padding: 28px 0px 16px 120px;
-    display:flex;
+    display: flex;
     gap: 50px;
 
 }
+
 .music-filter {
     box-sizing: border-box;
-    padding:0px 20px;
+    padding: 0px 20px;
     width: 320px;
     height: 36px;
     border: 4px solid #D9D9D9;
@@ -160,19 +252,97 @@ div#track-type-container {
     justify-content: space-evenly;
 }
 
-button.filter-track-type {    
+button.filter-track-type {
     width: 160px;
     background: #D9D9D9;
     border: none;
- 
+
 }
 
 button#type-typical {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
-    border-right: 1px dotted black; 
+    border-right: 1px dotted black;
 }
+
 button#type-instrumental {
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
+}
+
+section#music-selection {
+    background-color: #F2F2F2;
+    padding: 26px 0px 26px 46px;
+}
+
+.song-container {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+div.song-container-info {
+    padding: 4px;
+}
+
+h2.song-name {
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    letter-spacing: 0.05em;
+
+
+}
+
+h3.artist-name {
+    /* font-family: Kanit; */
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+p.song-published {
+    /* font-family: 'Rambla'; */
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.05em;
+    text-align: right;
+}
+
+div.song-container-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+div.song-container-footer * {
+    /* font-family: 'Rambla'; */
+   
+    letter-spacing: 0.05em;
+    vertical-align: center;
+
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+
+button.play-button {
+    font-size: 10px;
+    line-height: 12px;
+    border: 1.7px solid #000000;
+    height: 20px;
+}
+
+p.genre-label {
+
+    background: #D9D9D9;
+    border-radius: 100px;
+    height: 16px;
+    padding: 0px 6px;
+    font-size: 10px;
+    line-height: 15px;
+
 }
