@@ -137,6 +137,7 @@ table {
 /* 
  * End of Reset
  */
+
 html {
     font-family: sans-serif;
 }
@@ -152,19 +153,34 @@ h2 {
 p {
     font-size: 0.8rem;
 }
-
+main {
+    padding-top: 20px;
+}
 h1#latest-release {
-    margin: 20px 0px 28px 46px;
+ 
+    padding-left: 108px;
+    margin-bottom: 46px;
 }
 
 div#black-block {
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+ 
+
     position: fixed;
+    z-index: 2;
     background-color: black;
     width: 84px;
-    height: 1024px;
+    height: 100vh;
 }
 
-section#banner {
+div#black-block:hover{
+    width: 400px;
+}
+
+
+section#banner {    
     overflow: auto;
     position: relative;
 
@@ -199,7 +215,7 @@ section#banner::before {
 }
 
 div#banner-content {
-    padding: 30px 60px 36px 60px;
+    padding: 30px 60px 36px 140px;
     display: flex;
     gap: 90px;
 }
@@ -234,7 +250,7 @@ div#banner-buttons button {
 }
 
 section#music-filters {
-    padding: 28px 0px 16px 120px;
+    padding: 28px 0px 16px 200px;
     display: flex;
     gap: 50px;
 
@@ -278,8 +294,9 @@ button#type-instrumental {
 }
 
 section#music-selection {
+ 
     background-color: #F2F2F2;
-    padding: 26px 0px 26px 46px;
+    padding: 26px 40px 26px 126px;
 }
 output#selection-output {
     display: grid;
