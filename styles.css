@@ -162,9 +162,9 @@ h1#latest-release {
     margin-bottom: 46px;
 }
 
-div#black-block {
+div#sidebar {
     transition-property: width;
-    transition-duration: 0.5s;
+    transition-duration: 1.2s;
     transition-timing-function: ease-in-out;
  
 
@@ -175,8 +175,50 @@ div#black-block {
     height: 100vh;
 }
 
-div#black-block:hover{
+div#sidebar:hover{
     width: 400px;
+}
+
+#sidebar nav {
+    padding-top: 20px;
+}
+
+#sidebar nav ul {
+    list-style: none;
+}
+
+#sidebar nav ul li {
+    padding: 10px 0px 10px 20px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+}
+
+#sidebar nav ul li:hover {
+    background-color: #D9D9D9;
+    color: black;
+}
+
+#sidebar nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap;
+}
+
+
+div#sidebar .menu-text {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out 0.5s;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    white-space: nowrap;
+    color: white;
+}
+
+div#sidebar:hover .menu-text {
+    opacity: 1;
 }
 
 
