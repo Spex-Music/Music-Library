@@ -5,64 +5,83 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="script.js"></script>
-    <title>Document</title>
+    <title>Music Library</title>
+    <link rel="icon" type="image/x-icon" href="assets\png\spexlogo.png">
+
+    <!-- CSS -->
+        <link rel="stylesheet" href="styles.css">
+
+    <!-- Boxicons CSS -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 
 
 <body>  
+
+        <!--              Side Bar Start              -->
+
     <div id="sidebar">
         <nav>
             <ul>
+                <div class="spexlogo">
+                    <img src="assets\png\spexlogo.png" alt="Spex Records">
+                </div>
                 <li class="menu-item">
                     
                     <a href="#">
-                        <span class="menu-icon">🔑</span>
-                        <span class="menu-text">Login</span>
+                        <img src="assets\png\icons\log-in.png" alt="Log In">
+                        <span class="menu-text">Log In</span>
                     </a>
                 </li>
                 <li class="menu-item">
                     
                     <a href="#">
-                        <span class="menu-icon">🎵</span>
+                        <img src="assets\png\icons\music.png" alt="Music Library">
                         <span class="menu-text">Music Library</span>
                     </a>
                 </li>
                 <li class="menu-item">
                     
                     <a href="#">
-                        <span class="menu-icon">🎤</span>
+                        <img src="assets\png\icons\artist.png" alt="Artists">
                         <span class="menu-text">Artists</span>
                     </a>
                 </li>
                 <li class="menu-item">
                     
                     <a href="#">
-                        <span class="menu-icon">🛍️</span>
+                        <img src="assets\png\icons\store.png" alt="Store" style="height: auto; width: 21px;">
                         <span class="menu-text">Store</span>
                     </a>
                 </li>
                 <li class="menu-item">
                     
                     <a href="#">
-                        <span class="menu-icon">🔗</span>
+                        <img src="assets\png\icons\usagepolicy.png" alt="Usage Policy" style="height: auto; width: 22px;">
                         <span class="menu-text">Usage Policy</span>
                     </a>
                 </li>
                 <li class="menu-item">
                     
                     <a href="#">
-                        <span class="menu-icon">�</span>
+                        <img src="assets\png\icons\about.png" alt="About" style="height: auto; width: 23px;">
                         <span class="menu-text">About</span>
                     </a>
                 </li>
                 <li class="menu-item">
                     
                     <a href="#">
-                        <span class="menu-icon">📇</span>
+                        <img src="assets\png\icons\contact.png" alt="Contact" style="height: auto; width: 23px;">
                         <span class="menu-text">Contact</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    
+                    <a href="#">
+                        <img src="assets\png\icons\logout.png" alt="Log Out" style="padding: 50px 0px 0px 5px;">
+                        <p class="menu-text" style="padding-top: 45px;">Log Out</p>
                     </a>
                 </li>
            
@@ -71,6 +90,74 @@
             </ul>
         </nav>
     </div>
+
+    <!--              Side Bar End              -->
+
+
+    <!--              Log In Pop Up Start              -->
+<!--
+    <section id="container forms">
+         <div class="form login">
+                <div class="form-content">
+                    <header>Log In</header>
+    
+                    <form action="#">
+                        <div class="field input-field">
+                            <span class="tag1">Email</span>
+                            <input type="email" placeholder="" class="input" style="margin-top: 7px;">
+                        </div>
+    
+                        <div class="field input-field" style="margin-top: 35px;">
+                            <span class="tag1">Password</span>
+                            <input type="password" placeholder="" class="password" style="margin-top: 7px;">
+                            <!- <i class='bx bx-hide eye-icon'></i> ->
+                        </div>
+    
+                        <div class="form-link">
+                            <a href="#" class="forget-pass">Forget password</a>
+                        </div>
+    
+                        <div class="field button-field">
+                            <button>Log In</button>
+                        </div>
+                    </form>
+    
+                    <div class="form-link1">
+                        <span>Already have an account? <a href="#" class="signup-link">Sign Up</a></span>
+                    </div>
+                </div>
+                <div class="line"></div>
+    
+                <div class="media-options">
+                    <a href="#" class="field facebook">
+                        <i class='bx bxl-facebook facebook-icon'></i>
+                        <span>Login with Facebook</span>
+                    </a>
+                </div>
+    
+                <div class="media-options">
+                    <a href="#" class="field google">
+                        <img src="assets\png\icons\Social\google.png" alt="Google Icon" class="google-img">
+                        <span>Login with Google</span>
+                    </a>
+                </div>
+    
+                <div class="media-options">
+                    <a href="#" class="field google">
+                        <img src="assets\png\icons\Social\spotify.png" alt="Spotify Icon" class="spotify-img">
+                        <span>Login with Spotify</span>
+                    </a>
+                </div>
+             </div>
+
+         <!-- Sign Up Form-->
+
+         
+    </section>
+-->
+    <!--              Log In Pop Up End              -->
+
+
     <main>
         <h1 id="latest-release">Latest Releases</h1>
 
@@ -78,6 +165,7 @@
             <div id="banner-content">
                 <img id="banner-image" src="assets/png/Cover Art.png">
                 <div id="banner-info">
+                    <img src="assets\png\icons\trending.png" alt="Trending Release">
                     <p id="banner-topic">Trending Release</p>
                     <h2 id="banner-heading">Song Title</h2>
                     <p id="banner-artist">Artist Name</p>

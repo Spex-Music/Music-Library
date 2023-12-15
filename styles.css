@@ -3,6 +3,20 @@
    License: none (public domain)
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nova+Square&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* font-family: 'Anonymous Pro', monospace;
+font-family: 'Kanit', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nova Square', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+
 html,
 body,
 div,
@@ -154,33 +168,33 @@ p {
     font-size: 0.8rem;
 }
 main {
-    padding-top: 20px;
+    padding-top: 5px;
 }
-h1#latest-release {
- 
-    padding-left: 108px;
-    margin-bottom: 46px;
-}
+
+
+/* ---------------------------  Side Bar Start --------------------------- */
 
 div#sidebar {
     transition-property: width;
-    transition-duration: 1.2s;
+    transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
  
 
     position: fixed;
     z-index: 2;
-    background-color: black;
-    width: 84px;
+    background-color: #191d24;
+    box-shadow: white;
+    width: 70px;
     height: 100vh;
+    box-shadow: 1px 1px 10px 1px rgba(245, 245, 245, 0.1);
 }
 
 div#sidebar:hover{
-    width: 400px;
+    width: 260px;
 }
 
 #sidebar nav {
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 #sidebar nav ul {
@@ -188,15 +202,15 @@ div#sidebar:hover{
 }
 
 #sidebar nav ul li {
-    padding: 10px 0px 10px 20px;
+    padding: 18px 0px 10px 20px;
     color: white;
     font-size: 1.2rem;
     font-weight: 500;
+    letter-spacing: 0.3px;
     line-height: 1.8rem;
 }
 
 #sidebar nav ul li:hover {
-    background-color: #D9D9D9;
     color: black;
 }
 
@@ -206,25 +220,286 @@ div#sidebar:hover{
     white-space: nowrap;
 }
 
+#sidebar nav ul li a img {
+    display: inline;
+    position: fixed;
+    height: auto;
+    width: 20px;
+    padding-top: 5px;
+}
+
+#sidebar nav div {
+    height: 90px;
+    width: 50px;
+}
+
+#sidebar nav div img{
+    height: auto;
+    width: 40px;
+    display: inline;
+    padding: 10px 0px 50px 14px;
+    position: fixed;
+}
 
 div#sidebar .menu-text {
     opacity: 0;
-    transition: opacity 0.4s ease-in-out 0.5s;
-    font-size: 1.2rem;
-    font-weight: 500;
+    transition: opacity 0.2s ease-in-out;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     line-height: 1.8rem;
     white-space: nowrap;
     color: white;
+    padding-left: 60px;
+    padding-top: 0px;
 }
 
 div#sidebar:hover .menu-text {
     opacity: 1;
 }
 
+div#sidebar .menu-text:hover {
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
+}
+
+/* ---------------------------  Side Bar End --------------------------- */
+
+
+
+/* ---------------------------  Log In Pop Up Start --------------------------- */
+
+.container {
+    height: 100vh;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    background-color: lightblue;
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.form {
+    max-width: 500px;
+    width: 100%;
+    padding: 30px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    background: #F2F2F2;
+    box-shadow: -30px 0 30px rgba(25,29,36,0.2);
+
+    position: fixed;
+    z-index: 1000;
+    right: 0 !important;
+    overflow-y: auto;
+}
+
+header{
+    font-family: poppins;
+    font-size: 28px;
+    font-weight: 600;
+    color: #191d24;
+    text-align: center;
+}
+
+form {
+    margin-top: 30px;
+}
+
+.form .field{
+    height: 40px;
+    width: 100%;
+    margin-top: 15px;
+    position: relative;
+    border-radius: 10px;    
+}
+
+.field input,
+.field button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+
+.field .tag1{
+    font-size: 14px;
+    font-family: Kanit;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    padding-left: 5px;
+}
+
+.field input {
+    outline: none;
+    padding: 0 15px;
+    border: 1px solid#CACACA;
+}
+
+.field input {
+    border-bottom-width: 2px;
+}
+
+/* .eye-icon {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 5px;
+} */
+
+.field button {
+    color: #fff;
+    background-color: #0171d3;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.field button:hover {
+    background-color: #016dcb;
+}
+
+.form-link {
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    opacity: 60%;
+
+    font-family: Roboto;
+
+}
+
+.form-link1 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding-left: 30px;
+
+    font-family: Roboto;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    color: #2b2b2b;
+    font-weight: bold;
+    opacity: 80%;
+}
+
+.form-link span,
+.form-link a {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.form a {
+    color: blue;
+    text-decoration: none;
+}
+
+.form-content a:hover {
+    text-decoration: underline;
+}
+
+.line {
+    position: relative;
+    height: 1px;
+    width: 100%;
+    margin: 20px 0;
+    margin-bottom: 40px;
+    background-color: #d4d4d4;
+}
+
+.line::before {
+    content: 'Or';
+    font-size: 13px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F2F2F2;
+    color: #232323;
+    padding: 0 15px;
+
+    font-family: Roboto;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    color: #2b2b2b;
+    opacity: 80%;
+}
+
+.media-options a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a.facebook {
+    color: #fff;
+    background-color: #4267b2;
+}
+
+a.facebook .facebook-icon{
+    height: 28px;
+    width: 28px;
+    color: #0171d3;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.facebook-icon,
+img.google-img,
+img.spotify-img {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+img.google-img {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
+
+a.google {
+    border: 1px solid #CACACA;
+}
+
+img.spotify-img {
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
+
+a.google span {
+    font-weight: 500;
+    opacity: 0.6;
+    color: #232836;
+}
+
+
+/* ---------------------------  Log In Pop Up End --------------------------- */
+
+h1#latest-release {
+    padding-left: 108px;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 550;
+}
 
 section#banner {    
     overflow: auto;
     position: relative;
+    height: 260px;
+    width: 100%;
 
 }
 
@@ -241,7 +516,7 @@ section#banner::before {
     background-repeat: no-repeat;
 
     filter: blur(4px);
-    height: 216px;
+    height: 260px;
 
     background-position: center;
 
@@ -253,11 +528,11 @@ section#banner::before {
     -moz-filter: blur(5px);
     -o-filter: blur(5px);
     -ms-filter: blur(5px);
-    filter: blur(5px);
+    filter: blur(0px);
 }
 
 div#banner-content {
-    padding: 30px 60px 36px 140px;
+    padding: 55px 60px 36px 150px;
     display: flex;
     gap: 90px;
 }
@@ -266,25 +541,56 @@ div#banner-info {
     color: white;
 }
 
+div#banner-info img {
+    padding-top: 5px;
+    position: absolute;
+}
+
+p#banner-topic {
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-underline-offset: 10px;
+    opacity: 70%;
+    padding-left: 25px;
+    padding-top: 5px;
+    position: absolute;
+}
+
 h2#banner-heading {
-    margin-top: 36px;
+    margin-top: 40px;
+    font-family: 'K2D', sans-serif;
+    font-weight: bolder;
+    padding-left: 0px;
 }
 
 p#banner-artist {
-    margin-top: 4px;
+    margin-top: 15px;
+    font-family: 'Jura', sans-serif;
+    font-weight: 900;
+    padding-left: 5px;
 }
 
 div#banner-buttons {
     margin-top: 22px;
+    padding-left: 0px;
 }
 
 div#banner-buttons button {
 
-    color: white;
+    color: rgb(0, 0, 0);
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: bolder;
     padding: 1px 14px;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     border: none;
     border-radius: 20px;
+    width: 90px;
+    height: 25px;
 
     vertical-align: center;
     line-height: 18px;
