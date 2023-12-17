@@ -48,6 +48,19 @@ function sp3x_make_song_box() {
 
   return song_container;
 }
+function switchTab(elementToShow) {
+  const tabContainers = document.querySelectorAll(".main-container");
+  tabContainers.forEach((container) => {
+    console.log(elementToShow.id);
+    console.log(container.id);
+    if (container.id == elementToShow.id) {
+      container.style.display = "flex";
+    } else {
+      container.style.display = "none";
+    }
+  });
+}
+
 function toggleLogin(event) {
   console.log(event);
   const loginSection = document.getElementById("spex-login");
@@ -57,6 +70,7 @@ function toggleLogin(event) {
     loginSection.style.display = "none";
   }
 }
+
 function sp3x_start(event) {
   console.log("sp3x_start", event.type, Date());
   const selection_output = document.getElementById("selection-output");
