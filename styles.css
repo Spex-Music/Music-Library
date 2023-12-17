@@ -265,11 +265,7 @@ div#sidebar .menu-text:hover {
 /* ---------------------------  Log In Pop Up Start --------------------------- */
 
 .container {
-  height: 100vh;
-  width: 500px;
-  display: flex;
-  align-items: center;
-  background-color: lightblue;
+  
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
