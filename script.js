@@ -83,3 +83,74 @@ function sp3x_start(event) {
   }
 }
 document.addEventListener("DOMContentLoaded", sp3x_start);
+
+
+// ----------------------    Music Bar   ---------------------- 
+
+duration = document.querySelector("#duration");
+current = document.querySelector("#current");
+playPause = document.querySelector("#playPause");
+
+var timeCalculator = function (value) {
+  second = Math.floor(value % 60);
+  minute = Math.floor((value / 60) % 60);
+
+  if(second < 10) {
+    second = "0" + second;
+  }
+
+  return minute + ":" + second;
+};
+
+
+// ----------------------    Music Wave   ---------------------- 
+
+wavesurfer = WaveSurfer.create({
+  container: "#wave",
+  waveColor: "white",
+  progressColor: "Blue",
+  height: 48,
+  scrollParent: false
+});
+
+// ----------------------    Load Audio File   ---------------------- 
+
+wavesurfer.load("./music.mp3")
+
+// ----------------------    Play and pause a player   ---------------------- 
+
+playPause.addEventListener("click", function (e) {
+  wavesurfer.playPause();
+});
+
+// ----------------------    Load audio duration on load   ---------------------- 
+
+wavesurfer.on("ready", function (e){
+  duration.textContent=timeCalculator(wavesurfer.getDuration());
+});
+
+// ----------------------    get update current time on play   ---------------------- 
+
+wavesurfer.on("audioprocess", function (e){
+  current.textContent=timeCalculator(wavesurfer.getCurrentTime());
+});
+
+// ----------------------    Change play button to pause on playing   ---------------------- 
+
+wavesurfer.on("play", function (e) {
+  playPause.classList.remove("playbutton-bar");
+  playPause.classList.add("pausebutton-bar");
+});
+
+// ----------------------    Change pause button to play on playing   ---------------------- 
+
+wavesurfer.on("pause", function (e) {
+  playPause.classList.add("playbutton-bar");
+  playPause.classList.remove("pausebutton-bar");
+});
+
+// ----------------------    Update current time on seek   ---------------------- 
+
+wavesurfer.on("seek", function (e){
+  current.textContent=timeCalculator(wavesurfer.getCurrentTime());
+});

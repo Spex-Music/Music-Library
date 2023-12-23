@@ -266,16 +266,21 @@ div#sidebar .menu-text:hover {
 
 .container {
   
-  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
+  /* transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); */
 
-.form {
-  max-width: 500px;
+  max-width: 850px;
   width: 100%;
   padding: 30px;
-  border-top-left-radius: 40px;
-  border-bottom-left-radius: 40px;
+  top: 0px;
+  bottom: 0px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
   background: #f2f2f2;
+  background-image: url(bg.jpg);
+  background-position: center;
+  background-size: 400%;
+  background-position-x: -1600px;
+  background-repeat: no-repeat;
   box-shadow: -30px 0 30px rgba(25, 29, 36, 0.2);
 
   position: fixed;
@@ -284,16 +289,24 @@ div#sidebar .menu-text:hover {
   overflow-y: auto;
 }
 
+.form{
+  width: 450px;
+  margin-left: 390px;
+  position: fixed;
+}
+
 header {
   font-family: poppins;
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 30px;
+  font-weight: 700;
+  opacity: 80%;
   color: #191d24;
   text-align: center;
+  user-select: none;
 }
 
 form {
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .form .field {
@@ -320,12 +333,17 @@ form {
   font-weight: 400;
   letter-spacing: 0.8px;
   padding-left: 5px;
+  opacity: 70%;
+  user-select: none;
 }
 
 .field input {
   outline: none;
   padding: 0 15px;
   border: 1px solid#CACACA;
+  width: 420px;
+  justify-content: center;
+  align-items: center;
 }
 
 .field input {
@@ -348,20 +366,29 @@ form {
   background-color: #0171d3;
   transition: all 0.3s ease;
   cursor: pointer;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
+
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 550;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  opacity: 80%;
+  text-align: center;
 }
 
 .field button:hover {
   background-color: #016dcb;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.7);
 }
 
 .form-link {
-  text-align: left;
+  text-align: right;
   margin-top: 40px;
   margin-bottom: 30px;
-  padding-left: 30px;
+  padding-right: 30px;
   opacity: 60%;
-
-  font-family: Roboto;
 }
 
 .form-link1 {
@@ -370,22 +397,26 @@ form {
   margin-bottom: 40px;
   padding-left: 30px;
 
-  font-family: Roboto;
-  font-size: 13px;
-  letter-spacing: 0.3px;
+  font-family: Montserrat;
+  font-size: 12px;
+  letter-spacing: 0.1px;
   color: #2b2b2b;
-  font-weight: bold;
   opacity: 80%;
+  user-select: none;
 }
 
 .form-link span,
 .form-link a {
-  font-size: 14px;
-  font-weight: 400;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 550;
+  letter-spacing: 0.1px;
+  color: #2b2b2b;
+  opacity: 80%;
 }
 
 .form a {
-  color: blue;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
@@ -397,8 +428,8 @@ form {
   position: relative;
   height: 1px;
   width: 100%;
-  margin: 20px 0;
-  margin-bottom: 40px;
+  margin: 15px 0px;
+  margin-bottom: 35px;
   background-color: #d4d4d4;
 }
 
@@ -413,9 +444,10 @@ form {
   color: #232323;
   padding: 0 15px;
 
-  font-family: Roboto;
-  font-size: 15px;
+  font-family: Poppins;
+  font-size: 13px;
   letter-spacing: 0.3px;
+  font-weight: 400;
   color: #2b2b2b;
   opacity: 80%;
 }
@@ -424,11 +456,23 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+  border: none;
+  width: 100%;
+}
+
+.media-options a:hover {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 a.facebook {
-  color: #fff;
-  background-color: #4267b2;
+  background-color: #325fb8;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 550;
+  color: #ffffff;
+  opacity: 80%;
+  text-align: center;
 }
 
 a.facebook .facebook-icon {
@@ -460,6 +504,7 @@ img.google-img {
 
 a.google {
   border: 1px solid #cacaca;
+  background-color: #ffffff;
 }
 
 img.spotify-img {
@@ -469,16 +514,95 @@ img.spotify-img {
 }
 
 a.google span {
-  font-weight: 500;
-  opacity: 0.6;
   color: #232836;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 550;
+  letter-spacing: 0.3px;
+  color: #2b2b2b;
+  opacity: 80%;
+  text-align: center;
+}
+
+img.spotify-img {
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+}
+
+a.spotify {
+  border: 1px solid #cacaca;
+  background-color: #232836;
+}
+
+img.spotify-img {
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
+}
+
+a.spotify span {
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 550;
+  letter-spacing: 0.3px;
+  opacity: 85%;
+  text-align: center;
 }
 
 /* ---------------------------  Log In Pop Up End --------------------------- */
 
+/* ---------------------------  Sign Up Pop Up End --------------------------- */
+
+.form-link2 {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 35px;
+  padding-left: 30px;
+
+  font-family: Montserrat;
+  font-size: 12px;
+  letter-spacing: 0.1px;
+  color: #2b2b2b;
+  opacity: 80%;
+  user-select: none;
+}
+
+.line1 {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  margin: 15px 0px;
+  margin-bottom: 30px;
+  background-color: #d4d4d4;
+}
+
+.line1::before {
+  content: "Or";
+  font-size: 13px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f2f2f2;
+  color: #232323;
+  padding: 0 15px;
+
+  font-family: Poppins;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+  font-weight: 400;
+  color: #2b2b2b;
+  opacity: 80%;
+}
+
+/* ---------------------------  Sign Up Pop Up End --------------------------- */
+
 h1#latest-release {
+  position: absolute;
   padding-left: 108px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   font-family: "Poppins", sans-serif;
   font-size: 30px;
   font-weight: 550;
@@ -511,6 +635,7 @@ section#banner::before {
 
   background-size: cover;
   width: 100%;
+  margin-top: 50px;
 
   -webkit-filter: blur(5px);
   -moz-filter: blur(5px);
@@ -698,3 +823,128 @@ p.genre-label {
   font-size: 10px;
   line-height: 15px;
 }
+
+/* ---------------------------  Music Bar Start --------------------------- */
+
+.music-bar {
+  display: flex;
+  width: 100%;
+  height: 17px;
+  padding: 30px;
+  margin-left: 70px;
+  bottom: 0px;
+  background: #191d24;
+  position: fixed;
+}
+
+.music-bar h1 {
+  font-family: 'Kanit', sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 21px;
+  padding-left: 180px;
+  margin-top: -14px;
+  opacity: 85%;
+  position: fixed;
+}
+
+.music-bar h4 {
+  font-family: 'Kanit', sans-serif;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 13px;
+  padding-left: 180px;
+  margin-top: 16px;
+  opacity: 85%;
+  position: fixed;
+}
+
+div .music-bar-img img {
+  width: 130px;
+  height: auto;
+  position: fixed;
+  margin-left: 15px;
+  bottom: 15px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  pointer-events: none;
+  user-select: none;
+}
+
+div .bar-download {
+  width: 100px;
+  height: 27px;
+  border-radius: 50px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: white;
+  background-color: #ffffff00;
+  opacity: 80%;
+  cursor: pointer;
+  text-align: center;
+
+  position: fixed;
+  bottom: 20px;
+  right: 0 !important;
+  overflow-y: auto;
+  margin-right: 40px;
+}
+
+div .bar-download .bar-down {
+  font-size: 13px;
+  font-weight: 600;
+  font-family: 'poppins';
+  letter-spacing: 0.5px;
+  color: rgb(255, 255, 255);
+  position: relative;
+  bottom: -5px;
+}
+
+.playbutton-bar {
+  width: 20px;
+  z-index: 100;
+  bottom: 10px;
+  padding-left: 500px;
+  padding-bottom: 20px;
+  position: absolute;
+}
+
+.pausebutton-bar {
+  width: 20px;
+  z-index: 100;
+  bottom: 10px;
+  padding-left: 500px;
+  padding-bottom: 20px;
+  position: absolute;
+}
+
+.bar-time {
+  z-index: 100;
+  bottom: 10px;
+  padding-left: 500px;
+  padding-bottom: 20px;
+  position: absolute;
+
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.wave {
+  display: flex;
+  flex-direction: column;
+  background-color: #016dcb;
+  z-index: 100;
+  bottom: 30px;
+  left: 500px;
+  position: fixed;
+}
+
+#waveform {
+  margin-top: 15px;
+}
+/* ---------------------------  Music Bar End --------------------------- */
+

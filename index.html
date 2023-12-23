@@ -14,6 +14,10 @@
 
     <!-- Boxicons CSS -->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--  Waveform link-->
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
+
 </head>
 
 <body>  
@@ -23,7 +27,7 @@
     <div id="sidebar">
         <nav>
             <ul>
-                <div class="spexlogo">
+                <div class="spexlogo" style="user-select: none; pointer-events: none;">
                     <img src="assets/png/spexlogo.png" alt="Spex Records">
                 </div>
 
@@ -100,14 +104,14 @@
                     <form action="#">
 
                         <div class="field input-field">
-                            <span class="tag1">Email</span>
+                            <span class="tag1">Email</span><br>
                             <input type="email" placeholder="" class="input" style="margin-top: 7px;">
                         </div>
     
                         <div class="field input-field" style="margin-top: 35px;">
-                            <span class="tag1">Password</span>
+                            <span class="tag1">Password</span><br>
                             <input type="password" placeholder="" class="password" style="margin-top: 7px;">
-                            <i class='bx bx-hide eye-icon'></i>
+                            <!-- <i class='bx bx-hide eye-icon'></i> -->
                         </div>
     
                         <div class="form-link">
@@ -140,7 +144,7 @@
                 </div>
     
                 <div class="media-options">
-                    <a href="#" class="field google">
+                    <a href="#" class="field spotify">
                         <img src="assets/png/icons/Social/spotify.png" alt="Spotify Icon" class="spotify-img">
                         <span>Login with Spotify</span>
                     </a>
@@ -152,10 +156,74 @@
     </div>
     <!--              Log In Pop Up End              -->
 
+
+    <!--              Sign Up Form Start              -->
+
+    <div id="spex-signup" class="main-container container forms" style="display: none;">
+        <div class="form login">
+            <div class="form-content">
+                <header>Sign Up</header>
+
+                <form action="#">
+
+                    <div class="field input-field">
+                        <span class="tag1">Name</span><br>
+                        <input type="text" placeholder="" class="input" style="margin-top: 7px;">
+                    </div>
+                    
+                    <div class="field input-field" style="margin-top: 35px;">
+                        <span class="tag1">Email</span><br>
+                        <input type="email" placeholder="" class="input" style="margin-top: 7px;">
+                    </div>
+
+                    <div class="field input-field" style="margin-top: 35px;">
+                        <span class="tag1">Password</span><br>
+                        <input type="password" placeholder="" class="password" style="margin-top: 7px;">
+                        <!-- <i class='bx bx-hide eye-icon'></i> -->
+                    </div>
+
+                    <div class="field button-field" style="margin-top: 45px;">
+                        <button>Sign Up</button>
+                    </div>
+                </form>
+
+                <div class="form-link2">
+                    <span>Already have an account? <a href="#" class="signup-link">Log In</a></span>
+                </div>
+            </div>
+            <div class="line1"></div>
+
+            <div class="media-options">
+                <a href="#" class="field facebook">
+                    <i class='bx bxl-facebook facebook-icon'></i>
+                    <span>Sign Up with Facebook</span>
+                </a>
+            </div>
+
+            <div class="media-options">
+                <a href="#" class="field google">
+                    <img src="assets/png/icons/Social/google.png" alt="Google Icon" class="google-img">
+                    <span>Sign Up with Google</span>
+                </a>
+            </div>
+
+            <div class="media-options">
+                <a href="#" class="field spotify">
+                    <img src="assets/png/icons/Social/spotify.png" alt="Spotify Icon" class="spotify-img">
+                    <span>Sign Up with Spotify</span>
+                </a>
+            </div>
+         </div>
+</div>
+<!--              Sign Up Form End              -->
+
+
+ <!--              Music Library Start              -->    
+
     <div id="spex-library" class="main-container">
+        <h1 id="latest-release">Latest Releases</h1>
         <section id="banner">
 
-        <h1 id="latest-release">Latest Releases</h1>
             <div id="banner-content">
                 <img id="banner-image" src="assets/png/Cover Art.png">
                 <div id="banner-info">
@@ -185,6 +253,48 @@
         </section>
 
     </div>
+    
+ <!--              Music Library End              --> 
+
+
+     
+<!--              Music Bar Start              --> 
+
+        <section class="music-bar" style="display:n">
+            <div class="bar">
+                <div class="music-bar-img">
+                    <img src="assets\png\1.png">
+                </div>
+
+                <div class="bar-info">
+                    <h1>Song Name</h1>
+                    <h4>Artist Name</h4>
+
+                    <div class="bar-time">
+                        <span-bar id="current">0:00</span-bar>
+                        <span-bar id="current">0:00</span-bar>
+                    </div>
+                    <div class="controls">
+                        <img src="assets\png\icons\Music Bar Icons\play-button.png" alt="Play" class="playbutton-bar" id="playPause">
+                        <img src="assets\png\icons\Music Bar Icons\pause.png" alt="Pause" class="pausebutton-bar" id="playPause">
+                        <!-- <img src="assets\png\icons\Music Bar Icons\play-button.png" alt="Play" class="playbutton-bar" id="playPause">
+                        <img src="assets\png\icons\Music Bar Icons\play-button.png" alt="Play" class="playbutton-bar" id="playPause"> -->
+                    </div>
+
+                    <div class="wave">
+                        <div id="wave"></div>
+                    </div>
+                </div>
+
+                <button1 class="bar-download">
+                    <span class="bar-down">Download</span>
+                </button1>
+            </div>
+        </section>
+
+
+<!--              Music Bar End              --> 
+
 </main>
 
 </body>
