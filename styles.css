@@ -940,6 +940,7 @@ div .bar-download .bar-down {
   z-index: 100;
   bottom: 30px;
   left: 500px;
+  width: 40px;
   position: fixed;
 }
 

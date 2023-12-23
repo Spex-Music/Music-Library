@@ -1,3 +1,5 @@
+import WaveSurfer from 'https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.esm.js'
+
 function sp3x_make_song_box() {
   const song_container = document.createElement("div");
   song_container.classList.add("song-container");
@@ -87,25 +89,21 @@ document.addEventListener("DOMContentLoaded", sp3x_start);
 
 // ----------------------    Music Bar   ---------------------- 
 
-duration = document.querySelector("#duration");
-current = document.querySelector("#current");
-playPause = document.querySelector("#playPause");
+const duration = document.querySelector("#duration");
+const current = document.querySelector("#current");
+const playPause = document.querySelector("#playPause");
 
-var timeCalculator = function (value) {
-  second = Math.floor(value % 60);
-  minute = Math.floor((value / 60) % 60);
+const timeCalculator = function (value) {
+  const second = Math.floor(value % 60);
+  const minute = Math.floor((value / 60) % 60);
 
-  if(second < 10) {
-    second = "0" + second;
-  }
-
-  return minute + ":" + second;
+  return minute + ":" + ((second < 10) ? "0" + second : second );
 };
 
 
 // ----------------------    Music Wave   ---------------------- 
 
-wavesurfer = WaveSurfer.create({
+const wavesurfer = WaveSurfer.create({
   container: "#wave",
   waveColor: "white",
   progressColor: "Blue",
@@ -126,13 +124,18 @@ playPause.addEventListener("click", function (e) {
 // ----------------------    Load audio duration on load   ---------------------- 
 
 wavesurfer.on("ready", function (e){
-  duration.textContent=timeCalculator(wavesurfer.getDuration());
+  const content = timeCalculator(wavesurfer.getDuration());
+  console.log (content);
+  
+  duration.textContent = content;
+
 });
 
 // ----------------------    get update current time on play   ---------------------- 
 
 wavesurfer.on("audioprocess", function (e){
   current.textContent=timeCalculator(wavesurfer.getCurrentTime());
+  
 });
 
 // ----------------------    Change play button to pause on playing   ---------------------- 
@@ -154,3 +157,4 @@ wavesurfer.on("pause", function (e) {
 wavesurfer.on("seek", function (e){
   current.textContent=timeCalculator(wavesurfer.getCurrentTime());
 });
+
