@@ -902,7 +902,7 @@ div .bar-download .bar-down {
 
 .playbutton-bar {
   width: 20px;
-  z-index: 100;
+  z-index: 9999;
   bottom: 10px;
   padding-left: 500px;
   padding-bottom: 20px;
@@ -911,7 +911,7 @@ div .bar-download .bar-down {
 
 .pausebutton-bar {
   width: 20px;
-  z-index: 100;
+  z-index: 9999;
   bottom: 10px;
   padding-left: 500px;
   padding-bottom: 20px;
