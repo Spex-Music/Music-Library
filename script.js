@@ -91,7 +91,36 @@ document.addEventListener("DOMContentLoaded", sp3x_start);
 
 const duration = document.querySelector("#duration");
 const current = document.querySelector("#current");
-const playPause = document.querySelector("#playPause");
+const play = document.querySelector("#play");
+const pause = document.querySelector("#pause");
+const stop = document.querySelector("#stop");
+const volumeunmute = document.querySelector("#volumeunmute");
+const volumemute = document.querySelector("#volumemute");
+
+const trackPlayBtn = document.querySelector("#track-play-btn");
+const musicBarImg = document.querySelector("#music-bar-img");
+const musicBar = document.querySelector("#music-bar");
+const bannerPlayBtn = document.querySelector("#banner-play-btn");
+
+trackPlayBtn.onclick= function() {
+  musicBar.style.bottom = "0%";
+  musicBarImg.style.opacity = "100%";
+}
+
+bannerPlayBtn.onclick= function() {
+  musicBar.style.bottom = "0%";
+  musicBarImg.style.opacity = "100%";
+}
+
+document.getElementById("controls-right").onmousemove= function() {
+  document.getElementById("volume-box").style.bottom = "15px";
+}
+document.getElementById("volume-box").onmouseleave= function() {
+  document.getElementById("volume-box").style.bottom = "-100px";
+}
+document.getElementById("volume-area").onmouseleave= function() {
+  document.getElementById("volume-box").style.bottom = "-100px";
+}
 
 const timeCalculator = function (value) {
   const second = Math.floor(value % 60);
@@ -105,20 +134,42 @@ const timeCalculator = function (value) {
 
 const wavesurfer = WaveSurfer.create({
   container: "#wave",
-  waveColor: "white",
-  progressColor: "Blue",
-  height: 48,
+  waveColor: "#E5E4E2",
+  progressColor: "#818589",
+  height: 40,
   scrollParent: false
 });
 
 // ----------------------    Load Audio File   ---------------------- 
 
-wavesurfer.load("./music.mp3")
+wavesurfer.load("./Calvin Harris  Desire (ZERØ REMIX) EXTENDED MIX.wav")
 
-// ----------------------    Play and pause a player   ---------------------- 
+// ----------------------    Play, Pause, Stop and Volume a player   ---------------------- 
 
-playPause.addEventListener("click", function (e) {
-  wavesurfer.playPause();
+play.addEventListener("click", function (e) {
+  wavesurfer.play();
+});
+trackPlayBtn.addEventListener("click", function (e) {
+  wavesurfer.play();
+});
+bannerPlayBtn.addEventListener("click", function (e) {
+  wavesurfer.play();
+});
+
+pause.addEventListener("click", function (e) {
+  wavesurfer.pause();
+});
+
+stop.addEventListener("click", function (e) {
+  wavesurfer.stop();
+});
+
+volumeunmute.addEventListener("click", function (e) {
+  wavesurfer.setMuted(true);
+});
+
+volumemute.addEventListener("click", function (e) {
+  wavesurfer.setMuted(false);
 });
 
 // ----------------------    Load audio duration on load   ---------------------- 
@@ -141,15 +192,15 @@ wavesurfer.on("audioprocess", function (e){
 // ----------------------    Change play button to pause on playing   ---------------------- 
 
 wavesurfer.on("play", function (e) {
-  playPause.classList.remove("playbutton-bar");
-  playPause.classList.add("pausebutton-bar");
+  play.style.display = 'none';
+  pause.style.display = 'flex';
 });
 
 // ----------------------    Change pause button to play on playing   ---------------------- 
 
 wavesurfer.on("pause", function (e) {
-  playPause.classList.add("playbutton-bar");
-  playPause.classList.remove("pausebutton-bar");
+  play.style.display = 'flex';
+  pause.style.display = 'none';
 });
 
 // ----------------------    Update current time on seek   ---------------------- 
@@ -157,4 +208,122 @@ wavesurfer.on("pause", function (e) {
 wavesurfer.on("seek", function (e){
   current.textContent=timeCalculator(wavesurfer.getCurrentTime());
 });
+
+// ----------------------    Change volume button   ----------------------
+
+volumeunmute.onclick= function() {
+  volumeunmute.style.display = "none";
+  volumemute.style.display = "flex";
+  output.innerHTML=0;
+}
+
+volumemute.onclick= function() {
+  volumemute.style.display = "none";
+  volumeunmute.style.display = "flex";
+  output.innerHTML=x;
+}
+
+
+// ----------------------    Music Bar Start   ----------------------
+
+let x = 10;
+var vol = 1;
+let output = document.getElementById('output');
+let meter = document.getElementById('meter');
+let plus = document.getElementById('plus');
+let minus = document.getElementById('minus');
+output.innerHTML=x;
+
+plus.onclick= function () {
+    if (x >= 10){
+        return false;
+    }
+    if (vol >= 1){
+        return false;
+    }
+    if (x => 1){
+      volumeunmute.style.display = "flex";
+      volumemute.style.display = "none";
+      wavesurfer.setMuted(false);
+  }
+    if (x >= 7){
+   meter.style.background = "#f00"
+   meter.style.filter = "drop-shadow(0 0 2.5px #f00) drop-shadow(0 0 10px #f00)"
+    }
+  vol += 0.1;
+  wavesurfer.setVolume(vol);
+  output.innerHTML= ++x;
+  meter.style.width = x*10+'%' ;
+}
+
+minus.onclick= function () {
+    if (x <= 1){
+      volumeunmute.style.display = "none";
+      volumemute.style.display = "flex";
+      wavesurfer.setMuted(true);
+    }
+    if (x <= 0){
+        return false;
+    }
+    if (vol <= 0.00){
+        return false;
+    }
+    if (x <= 7){
+        meter.style.background = "#0f0"
+        meter.style.filter = "drop-shadow(0 0 2.5px #f00) drop-shadow(0 0 10px #0f0)"
+         }
+  vol -= 0.1;
+  wavesurfer.setVolume(vol);
+  output.innerHTML= --x;
+  meter.style.width = x*10+'%' ;
+}
+
+// ----------------------    Music Bar Start   ----------------------
+
+let barDownload = document.querySelector(".bar-download");
+
+barDownload.addEventListener("click", ()=>{
+  barDownload.classList.add("active");
+
+  setTimeout(()=>{
+    barDownload.classList.remove("active");  // remove active class after 6s
+    document.querySelector("i").classList.replace("bx-cloud-download", "bx-check-circle")
+    document.querySelector(".bar-down").innerHTML = "Completed";
+
+  },6000) //1s = 1000ms
+})
+
+
+// ----------------------    Side Bar, Login & Sign Up Start   ----------------------
+
+const loginSignupBlock = document.getElementById('login-signup-block');
+const loginBtn = document.getElementById('login-btn');
+const spexLogin = document.getElementById('spex-login');
+const signupLink = document.getElementById('signup-link');
+const spexSignup = document.getElementById('spex-signup');
+const loginLink = document.getElementById('login-link');
+const formClose = document.getElementById('form-close');
+
+loginBtn.onclick= function() {
+  loginSignupBlock.style.transform = "translateX(0%)";
+}
+
+signupLink.onclick= function() {
+  spexSignup.style.left = "10%";
+  spexLogin.style.left = "110%";
+}
+
+loginLink.onclick= function() {
+  spexLogin.style.left = "10%";
+  spexSignup.style.left = "110%";
+}
+
+formClose.onclick= function() {
+  loginSignupBlock.style.transform = "translateX(110%)";
+  spexSignup.style.left = "110%";
+  spexLogin.style.left = "10%";
+}
+
+
+// ----------------------    Side Bar, Login & Sign Up End   ----------------------
 

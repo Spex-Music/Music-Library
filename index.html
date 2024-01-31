@@ -32,57 +32,59 @@
                 </div>
 
                 <li class="menu-item">
-                    <a href="#" onclick="toggleLogin(event)">
-                        <img src="assets/png/icons/log-in.png" alt="Log In">
+                    <a href="#" id="login-btn">
+                        <i class='bx bx-log-in' style="margin-left: -2px;"></i>
+                        <i class='bx bx-user-circle' style="display: none;"></i>
                         <span class="menu-text">Log In</span>
+                        <span class="menu-text" style="display: none;">Profile</span>
                     </a>
                 </li>
                 
                 <li class="menu-item">
                     <a href="#">
-                        <img src="assets/png/icons/music.png" alt="Music Library">
+                        <i class='bx bxs-playlist'></i>
                         <span class="menu-text">Music Library</span>
                     </a>
                 </li>
 
                 <li class="menu-item">    
                     <a href="#">
-                        <img src="assets/png/icons/artist.png" alt="Artists">
+                        <i class='bx bx-user'></i>
                         <span class="menu-text">Artists</span>
                     </a>
                 </li>
 
                 <li class="menu-item">    
                     <a href="#">
-                        <img src="assets/png/icons/store.png" alt="Store" style="height: auto; width: 21px;">
+                        <i class='bx bx-store-alt'></i>
                         <span class="menu-text">Store</span>
                     </a>
                 </li>
 
                 <li class="menu-item">    
                     <a href="#">
-                        <img src="assets/png/icons/usagepolicy.png" alt="Usage Policy" style="height: auto; width: 22px;">
+                        <i class='bx bx-file'></i>
                         <span class="menu-text">Usage Policy</span>
                     </a>
                 </li>
 
                 <li class="menu-item">   
                     <a href="#">
-                        <img src="assets/png/icons/about.png" alt="About" style="height: auto; width: 23px;">
+                        <i class='bx bx-info-circle'></i>
                         <span class="menu-text">About</span>
                     </a>
                 </li>
 
                 <li class="menu-item">   
                     <a href="#">
-                        <img src="assets/png/icons/contact.png" alt="Contact" style="height: auto; width: 23px;">
+                        <i class='bx bx-phone'></i>
                         <span class="menu-text">Contact</span>
                     </a>
                 </li>
 
                 <li class="menu-item">
                     <a href="#">
-                        <img src="assets/png/icons/logout.png" alt="Log Out" style="padding: 50px 0px 0px 5px;">
+                        <i class='bx bx-log-out' style="padding: 50px 0px 0px 0px;"></i>
                         <p class="menu-text" style="padding-top: 45px;">Log Out</p>
                     </a>
                 </li>
@@ -94,10 +96,18 @@
     <!--              Side Bar End              -->
     <main>
 
-    <!--              Log In Pop Up Start              -->
+    <!--              Log In & Sign Up Pop Up Start              -->
 
-        <div id="spex-login" class="main-container container forms" style="display:none">
-            <div class="form login">
+
+        <div class="login-signup-container container forms" id="login-signup-block" style="transform: translateX(110%);">
+
+        <i class='bx bx-x-circle' id="form-close"></i>
+
+        <div class="login-signup-block1"></div>
+
+        <div class="login-signup-block2">
+        <!-- Loin In Form -->
+            <div class="form login-block" id="spex-login" style="left: 10%;">
                 <div class="form-content">
                     <header>Log In</header>
     
@@ -111,11 +121,10 @@
                         <div class="field input-field" style="margin-top: 35px;">
                             <span class="tag1">Password</span><br>
                             <input type="password" placeholder="" class="password" style="margin-top: 7px;">
-                            <!-- <i class='bx bx-hide eye-icon'></i> -->
                         </div>
     
                         <div class="form-link">
-                            <a href="#" class="forget-pass">Forget password</a>
+                            <a href="#" class="forget-pass">Forget password?</a>
                         </div>
     
                         <div class="field button-field">
@@ -124,134 +133,419 @@
                     </form>
     
                     <div class="form-link1">
-                        <span>Already have an account? <a href="#" class="signup-link">Sign Up</a></span>
+                        <span>Already have an account? <a href="#" class="signup-link" id="signup-link">Sign Up</a></span>
                     </div>
                 </div>
                 <div class="line"></div>
     
-                <div class="media-options">
-                    <a href="#" class="field facebook">
-                        <i class='bx bxl-facebook facebook-icon'></i>
-                        <span>Login with Facebook</span>
-                    </a>
+                <div id="media-options-block">
+                    <div class="media-options">
+                        <a href="#" class="field facebook">
+                            <i class='bx bxl-facebook facebook-icon'></i>
+                            <span>Login with Facebook</span>
+                        </a>
+                    </div>
+        
+                    <div class="media-options">
+                        <a href="#" class="field google">
+                            <img src="assets/png/icons/Social/google.png" alt="Google Icon" class="google-img">
+                            <span>Login with Google</span>
+                        </a>
+                    </div>
+        
+                    <div class="media-options">
+                        <a href="#" class="field spotify">
+                            <img src="assets/png/icons/Social/spotify.png" alt="Spotify Icon" class="spotify-img">
+                            <span>Login with Spotify</span>
+                        </a>
+                    </div>
                 </div>
-    
-                <div class="media-options">
-                    <a href="#" class="field google">
-                        <img src="assets/png/icons/Social/google.png" alt="Google Icon" class="google-img">
-                        <span>Login with Google</span>
-                    </a>
-                </div>
-    
-                <div class="media-options">
-                    <a href="#" class="field spotify">
-                        <img src="assets/png/icons/Social/spotify.png" alt="Spotify Icon" class="spotify-img">
-                        <span>Login with Spotify</span>
-                    </a>
-                </div>
-             </div>
+                
+            </div>
 
-         <!-- Sign Up Form -->
+        <!-- Sign Up Form -->
+            <div class="form signup-block" id="spex-signup" style="left: 110%;">
+                <div class="form-content">
+                    <header>Sign Up</header>
+    
+                    <form action="#">
+    
+                        <div class="field input-field">
+                            <span class="tag1">Name</span><br>
+                            <input type="text" placeholder="" class="input" style="margin-top: 7px;">
+                        </div>
+                        
+                        <div class="field input-field" style="margin-top: 35px;">
+                            <span class="tag1">Email</span><br>
+                            <input type="email" placeholder="" class="input" style="margin-top: 7px;">
+                        </div>
+    
+                        <div class="field input-field" style="margin-top: 35px;">
+                            <span class="tag1">Password</span><br>
+                            <input type="password" placeholder="" class="password" style="margin-top: 7px;">
+                        </div>
+    
+                        <div class="field button-field" style="margin-top: 45px;">
+                            <button>Sign Up</button>
+                        </div>
+                    </form>
+    
+                    <div class="form-link2">
+                        <span>Already have an account? <a href="#" class="login-link" id="login-link">Log In</a></span>
+                    </div>
+                </div>
+                <div class="line1"></div>
+
+                <div id="media-options-block">
+                    <div class="media-options">
+                        <a href="#" class="field facebook">
+                            <i class='bx bxl-facebook facebook-icon'></i>
+                            <span>Sign Up with Facebook</span>
+                        </a>
+                    </div>
+        
+                    <div class="media-options">
+                        <a href="#" class="field google">
+                            <img src="assets/png/icons/Social/google.png" alt="Google Icon" class="google-img">
+                            <span>Sign Up with Google</span>
+                        </a>
+                    </div>
+        
+                    <div class="media-options">
+                        <a href="#" class="field spotify">
+                            <img src="assets/png/icons/Social/spotify.png" alt="Spotify Icon" class="spotify-img">
+                            <span>Sign Up with Spotify</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
          
-    </div>
-    <!--              Log In Pop Up End              -->
+        </div>
 
 
-    <!--              Sign Up Form Start              -->
+    <!--              Log In & Sign Up Pop Up End              -->
 
-    <div id="spex-signup" class="main-container container forms" style="display: none;">
-        <div class="form login">
-            <div class="form-content">
-                <header>Sign Up</header>
 
-                <form action="#">
 
-                    <div class="field input-field">
-                        <span class="tag1">Name</span><br>
-                        <input type="text" placeholder="" class="input" style="margin-top: 7px;">
-                    </div>
-                    
-                    <div class="field input-field" style="margin-top: 35px;">
-                        <span class="tag1">Email</span><br>
-                        <input type="email" placeholder="" class="input" style="margin-top: 7px;">
-                    </div>
+<!--              Music Library Start              -->    
 
-                    <div class="field input-field" style="margin-top: 35px;">
-                        <span class="tag1">Password</span><br>
-                        <input type="password" placeholder="" class="password" style="margin-top: 7px;">
-                        <!-- <i class='bx bx-hide eye-icon'></i> -->
-                    </div>
+<!-- <div id="spex-library" class="main-container">
+    <h1 id="latest-release">Latest Releases</h1>
+    <section id="banner">
 
-                    <div class="field button-field" style="margin-top: 45px;">
-                        <button>Sign Up</button>
-                    </div>
-                </form>
-
-                <div class="form-link2">
-                    <span>Already have an account? <a href="#" class="signup-link">Log In</a></span>
+        <div id="banner-content">
+            <img id="banner-image" src="assets/png/Cover Art.png">
+            <div id="banner-info">
+                <img src="assets/png/icons/trending.png" alt="Trending Release">
+                <p id="banner-topic">Trending Release</p>
+                <h2 id="banner-heading">Song Title</h2>
+                <p id="banner-artist">Artist Name</p>
+                <div id="banner-buttons">
+                    <button>Play</button>
+                    <button>Download</button>
                 </div>
             </div>
-            <div class="line1"></div>
+        </div>
+    </section>
 
-            <div class="media-options">
-                <a href="#" class="field facebook">
-                    <i class='bx bxl-facebook facebook-icon'></i>
-                    <span>Sign Up with Facebook</span>
-                </a>
-            </div>
+    <section id="music-filters">
+        <input class="music-filter" id="" />
+        <select class="music-filter"></select>
+        <div class="music-filter-special" id="track-type-container">
+            <button class="filter-track-type" id="type-typical">Typical</button>
+            <button class="filter-track-type" id="type-instrumental">Instrumental</button>
+        </div>
+    </section>
 
-            <div class="media-options">
-                <a href="#" class="field google">
-                    <img src="assets/png/icons/Social/google.png" alt="Google Icon" class="google-img">
-                    <span>Sign Up with Google</span>
-                </a>
-            </div>
+    <section id="music-selection">
+        <output id="selection-output"></output>
+    </section>
 
-            <div class="media-options">
-                <a href="#" class="field spotify">
-                    <img src="assets/png/icons/Social/spotify.png" alt="Spotify Icon" class="spotify-img">
-                    <span>Sign Up with Spotify</span>
-                </a>
-            </div>
-         </div>
-</div>
-<!--              Sign Up Form End              -->
-
-
- <!--              Music Library Start              -->    
+</div> -->
 
     <div id="spex-library" class="main-container">
-        <h1 id="latest-release">Latest Releases</h1>
-        <section id="banner">
+        <header class="header">
+            <h1>Latest Releases</h1>
+        </header>
 
+        <section id="banner">
             <div id="banner-content">
-                <img id="banner-image" src="assets/png/Cover Art.png">
+                <img id="banner-image" src="Blake Hills - Don't Be Shy (Cover Art).jpg">
                 <div id="banner-info">
-                    <img src="assets/png/icons/trending.png" alt="Trending Release">
-                    <p id="banner-topic">Trending Release</p>
-                    <h2 id="banner-heading">Song Title</h2>
-                    <p id="banner-artist">Artist Name</p>
+                    <div class="banner-trending">
+                        <i class='bx bx-trending-up'></i>
+                        <p class="banner-topic">Trending Release</p>
+                    </div>
+                    <h2 id="banner-heading">Don't Be Shy</h2>
+                    <p id="banner-artist">Blake Hills</p>
                     <div id="banner-buttons">
-                        <button>Play</button>
-                        <button>Download</button>
+                        <button id="banner-play-btn">
+                            <i class='bx bx-play-circle bx-flashing' ></i>
+                            <span>Play</span>
+                        </button>
+                        <button id="banner-download-btn">
+                            <i class='bx bxs-download bx-flashing' ></i>
+                            <span>Download</span>
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="music-filters">
-            <input class="music-filter" id="" />
-            <select class="music-filter"></select>
-            <div class="music-filter-special" id="track-type-container">
-                <button class="filter-track-type" id="type-typical">Typical</button>
-                <button class="filter-track-type" id="type-instrumental">Instrumental</button>
+        <section id="music-library">
+            <div class="filter-area">
+                <div class="music-filter-name">
+                    <i class='bx bx-search-alt'></i>
+                    <input type="text" placeholder="Search Name"></input>
+                </div>
+
+                <div class="music-filter-name">
+                    <i class='bx bx-user'></i>
+                    <input type="text" placeholder="Search Artist"></input>
+                </div>
+
+                <div class="music-filter-genre">
+                    <i class='bx bx-purchase-tag bx-rotate-90'></i>
+                    <select id="genrelist" name="Genrelist">
+                        <option selected disabled></option>
+                        <option value="Bass">Bass</option>
+                        <option value="Bass House">Bass House</option>
+                        <option value="Chill">Chill</option>
+                        <option value="Deep House">Deep House</option>
+                        <option value="Drum & Bass">Drum & Bass</option>
+                        <option value="Drumstep">Drumstep</option>
+                        <option value="Dubstep">Dubstep</option>
+                        <option value="EDM">EDM</option>
+                        <option value="Electro House">Electro House</option>
+                        <option value="Electronic">Electronic</option>
+                        <option value="Future Bass">Future Bass</option>
+                        <option value="Future House">Future House</option>
+                        <option value="Glitch Hop">Glitch Hop</option>
+                        <option value="Hardstyle">Hardstyle</option>
+                        <option value="House">House</option>
+                        <option value="Melodic Dubstep">Melodic Dubstep</option>
+                        <option value="Phonk">Phonk</option>
+                        <option value="Progressive House/Melodic Progressive House">Progressive House/Melodic Progressive House</option>
+                        <option value="Tech House">Tech House</option>
+                        <option value="Techno">Techno</option>
+                        <option value="Trap">Trap</option>
+                        <option value="Tropical House">Tropical House</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="music-filter-special">
+                    <div class="track-type" id="track-type-container">
+                        <input type="checkbox" class="filter-track-type" id="type-typical"></input>
+                        <label for="Typical">Typical</label>
+                    </div>
+                    <div class="track-type" id="track-type-container">
+                        <input type="checkbox" class="filter-track-type" id="type-instrumental"></input>
+                        <label for="Instrumental">Instrumental</label>
+                    </div>
+                </div>
+            </div>
+
+            <div id="grid-container">
+                <div class="slider" id="slider1">
+                    <div class="track-block" id="grid1">
+                        <a href="" class="details-bar">
+                            <div class="upper-area">
+                                <div id="track-img" style="background-image: url(/Prod.\ Core\ -\ What\ The\ Phonk\ \(Cover\ Art\).jpg);"></div>
+                            </div>
+                            <div class="lower-area">
+                                <p>What The Phonk</p>
+                                <span>Prod. Core</span>
+                            </div>
+                        </a>
+                        <div class="option-bar">
+                            <div class="track-options">
+                                <div class="track-details">
+                                    <p>2 days ago</p>
+                                    <span>Progressive House</span>
+                                </div>
+                                <div class="track-play">
+                                    <button id="track-play-btn">
+                                        <i class='bx bx-play-circle'></i>
+                                        <span>Play</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="track-block" id="grid1">
+                        <a href="" class="details-bar">
+                            <div class="upper-area">
+                                <div id="track-img" style="background-image: url(/Fred\ X\ -\ Struggle\ \(Cover\ Art\).jpg);"></div>
+                            </div>
+                            <div class="lower-area">
+                                <p>What The Phonk</p>
+                                <span>Prod. Core</span>
+                            </div>
+                        </a>
+                        <div class="option-bar">
+                            <div class="track-options">
+                                <div class="track-details">
+                                    <p>2 days ago</p>
+                                    <span>Progressive House</span>
+                                </div>
+                                <div class="track-play">
+                                    <button id="track-play-btn">
+                                        <i class='bx bx-play-circle'></i>
+                                        <span>Play</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="track-block" id="grid1">
+                        <a href="" class="details-bar">
+                            <div class="upper-area">
+                                <div id="track-img" style="background-image: url(/AUXIMITY\ \ -\ Paradox\ \(Cover\ Art\).jpg);"></div>
+                            </div>
+                            <div class="lower-area">
+                                <p>What The Phonk</p>
+                                <span>Prod. Core</span>
+                            </div>
+                        </a>
+                        <div class="option-bar">
+                            <div class="track-options">
+                                <div class="track-details">
+                                    <p>2 days ago</p>
+                                    <span>Progressive House</span>
+                                </div>
+                                <div class="track-play">
+                                    <button id="track-play-btn">
+                                        <i class='bx bx-play-circle'></i>
+                                        <span>Play</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="track-block" id="grid1">
+                        <a href="" class="details-bar">
+                            <div class="upper-area">
+                                <div id="track-img" style="background-image: url(/Blake\ Hills\ -\ Don\'t\ Be\ Shy\ \(Cover\ Art\).jpg);"></div>
+                            </div>
+                            <div class="lower-area">
+                                <p>What The Phonk</p>
+                                <span>Prod. Core</span>
+                            </div>
+                        </a>
+                        <div class="option-bar">
+                            <div class="track-options">
+                                <div class="track-details">
+                                    <p>2 days ago</p>
+                                    <span>Progressive House</span>
+                                </div>
+                                <div class="track-play">
+                                    <button id="track-play-btn">
+                                        <i class='bx bx-play-circle'></i>
+                                        <span>Play</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="track-block" id="grid1">
+                        <a href="" class="details-bar">
+                            <div class="upper-area">
+                                <div id="track-img" style="background-image: url(/In\ My\ Dreams\ -\ Soundwaiv\ Music\ \(Cover\ Art\).jpg);"></div>
+                            </div>
+                            <div class="lower-area">
+                                <p>What The Phonk</p>
+                                <span>Prod. Core</span>
+                            </div>
+                        </a>
+                        <div class="option-bar">
+                            <div class="track-options">
+                                <div class="track-details">
+                                    <p>2 days ago</p>
+                                    <span>Progressive House</span>
+                                </div>
+                                <div class="track-play">
+                                    <button id="track-play-btn">
+                                        <i class='bx bx-play-circle'></i>
+                                        <span>Play</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="track-block" id="grid1">
+                        <a href="" class="details-bar">
+                            <div class="upper-area">
+                                <div id="track-img" style="background-image: url(/ixokadel\ -\ \ Rivers\ \(Cover\ Art\).jpg);"></div>
+                            </div>
+                            <div class="lower-area">
+                                <p>What The Phonk</p>
+                                <span>Prod. Core</span>
+                            </div>
+                        </a>
+                        <div class="option-bar">
+                            <div class="track-options">
+                                <div class="track-details">
+                                    <p>2 days ago</p>
+                                    <span>Progressive House</span>
+                                </div>
+                                <div class="track-play">
+                                    <button id="track-play-btn">
+                                        <i class='bx bx-play-circle'></i>
+                                        <span>Play</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <section id="music-selection">
-            <output id="selection-output"></output>
-        </section>
+        <footer id="pagination">
 
+            <div class="pag-block">
+
+                <button type="button" class="left-double-arrow pag-box">
+                    <img src="assets\png\icons\double_arrow_left.svg">
+                </button>
+                <button type="button" class="left-single-arrow pag-box">
+                    <img src="assets\png\icons\single_arrow_left.svg">
+                </button>
+
+                <button type="button" class="number pag-box">
+                    <span>1</span>
+                </button>
+                <button type="button" class="number pag-box">
+                    <span>2</span>
+                </button>
+                <button type="button" class="number pag-box">
+                    <span>3</span>
+                </button>
+                <button type="button" class="number pag-box">
+                    <span>4</span>
+                </button>
+                <button type="button" class="number pag-box">
+                    <span>5</span>
+                </button>
+
+                <button type="button" class="right-single-arrow pag-box">
+                    <img src="assets\png\icons\single_arrow_right.svg">
+                </button>
+                <button type="button" class="right-double-arrow pag-box">
+                    <img src="assets\png\icons\double_arrow_right.svg">
+                </button>
+
+            </div>
+
+        </footer>
     </div>
     
  <!--              Music Library End              --> 
@@ -260,35 +554,67 @@
      
 <!--              Music Bar Start              --> 
 
-        <section class="music-bar" style="display:n">
+        <section class="music-bar" id="music-bar" style="bottom: -20%;">
             <div class="bar">
                 <div class="music-bar-img">
-                    <img src="assets\png\1.png">
+                    <img src="AUXIMITY  - Paradox (Cover Art).jpg" id="music-bar-img" style="opacity: 0%;">
                 </div>
 
                 <div class="bar-info">
-                    <h1>Song Name</h1>
-                    <h4>Artist Name</h4>
-
-                    <div class="bar-time">
-                        <span-bar id="current">0:00</span-bar>
-                        <span-bar id="duration">0:00</span-bar>
+                    <div class="bar-details">
+                        <h1>What The Phonk</h1>
+                        <h4>Prod. Core</h4>
                     </div>
-                    <div class="controls">
-                        <img src="assets\png\icons\Music Bar Icons\play-button.png" alt="Play" class="playbutton-bar" id="playPause">
-                        <img src="assets\png\icons\Music Bar Icons\pause.png" alt="Pause" class="pausebutton-bar" id="playPause">
-                        <!-- <img src="assets\png\icons\Music Bar Icons\play-button.png" alt="Play" class="playbutton-bar" id="playPause">
-                        <img src="assets\png\icons\Music Bar Icons\play-button.png" alt="Play" class="playbutton-bar" id="playPause"> -->
+
+                    <div class="controls-left">
+                        <i class='bx bx-play playbutton-bar' id="play"></i>
+                        <i class='bx bx-pause pausebutton-bar' id="pause" style="display: none;"></i>
+                        <i class='bx bx-stop stopbutton-bar' id="stop"></i>
+                    </div>
+
+                    <div class="bar-time-start bar-time">
+                        <span-bar id="current">0:00</span-bar>
                     </div>
 
                     <div class="wave">
                         <div id="wave"></div>
                     </div>
+                    
+                    <div class="bar-time-end bar-time">
+                        <span-bar id="duration">0:00</span-bar>
+                    </div>
+                    
+                    <div class="controls-right" id="controls-right">
+                        <i class='bx bx-volume-full volumeunmute-bar' id="volumeunmute"></i>
+                        <i class='bx bx-volume-mute volumemute-bar' id="volumemute" style="display: none;"></i>
+                    </div>
+
+                    
+                    <div class="volume" id="volume">
+                        <div class="volume-area" id="volume-area">
+                            <div class="volume-box" id="volume-box" style="bottom: -100px;">
+                                <div class="spinner">
+                                    <span id="output"></span>
+                                    <div class="progress">
+                                        <span id="meter"></span>
+                                    </div>
+                                    <div class="btn minus" id="minus">-</div>
+                                    <div class="btn plus" id="plus">+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <button1 class="bar-download">
-                    <span class="bar-down">Download</span>
-                </button1>
+                <div class="bar-track-down">
+                    <button1 class="bar-download">
+                        <div class="bar-down-content">
+                            <i class="bx bx-cloud-download"></i>
+                            <span class="bar-down">Download</span>
+                        </div>
+                    </button1>
+                </div>
+                
             </div>
         </section>
 

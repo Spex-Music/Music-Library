@@ -3,17 +3,28 @@
    License: none (public domain)
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nova+Square&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Dongle:wght@300;400;700&family=Gemunu+Libre:wght@200..800&family=Inter:slnt,wght@-10..0,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lexend:wght@100..900&family=Marvel:ital,wght@0,400;0,700;1,400;1,700&family=Mina:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nixie+One&family=Nova+Square&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap');
 
-/* font-family: 'Anonymous Pro', monospace;
-font-family: 'Kanit', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Nova Square', sans-serif;
-font-family: 'Oswald', sans-serif;
-font-family: 'Roboto', sans-serif;
+
+/* font-family: "Inter", sans-serif;
+   font-family: "Teko", sans-serif;
+   font-family: "Roboto", sans-serif;
+   font-family: "Poppins", sans-serif;
+   font-family: "Oxanium", sans-serif;
+   font-family: "Nova Square", sans-serif;
+   font-family: "Nixie One", system-ui;
+   font-family: "Montserrat", sans-serif;
+   font-family: "Mina", sans-serif;
+   font-family: "Marvel", sans-serif;
+   font-family: "Lexend", sans-serif;
+   font-family: "Kanit", sans-serif;
+   font-family: "Gemunu Libre", sans-serif;
+   font-family: "Bebas Neue", sans-serif;
+   font-family: "Anonymous Pro", monospace;
+   font-family: "Dongle", sans-serif;
+   font-family:
+   font-family: 
+   font-family: 
 */
 
 html,
@@ -122,6 +133,7 @@ section {
 
 body {
   line-height: 1;
+  background-color: #fff;
 }
 
 ol,
@@ -178,9 +190,10 @@ div#sidebar {
   transition-timing-function: ease-in-out;
 
   position: fixed;
+  display: flex;
+  flex-direction: column;
   z-index: 2;
   background-color: #191d24;
-  box-shadow: white;
   width: 70px;
   height: 100vh;
   box-shadow: 1px 1px 10px 1px rgba(245, 245, 245, 0.1);
@@ -217,11 +230,13 @@ div#sidebar:hover {
   white-space: nowrap;
 }
 
-#sidebar nav ul li a img {
+#sidebar nav ul li a i {
   display: inline;
-  position: fixed;
-  height: auto;
-  width: 20px;
+  position: absolute;
+  font-size: 22px;
+  font-weight: 100;
+  color: #fff;
+  opacity: 95%;
   padding-top: 5px;
 }
 
@@ -238,20 +253,27 @@ div#sidebar:hover {
   position: fixed;
 }
 
-div#sidebar .menu-text {
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
+.menu-text {
+  display: flex;
+  position: relative;
+  padding-left: 60px;
+  padding-top: 0px;
+  pointer-events: none;
+
   font-size: 12px;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
+  color: white;
   line-height: 1.8rem;
   white-space: nowrap;
-  color: white;
-  padding-left: 60px;
-  padding-top: 0px;
+
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 
 div#sidebar:hover .menu-text {
+  pointer-events: all;
+  transition-delay: 0.3s;
   opacity: 1;
 }
 
@@ -264,23 +286,24 @@ div#sidebar .menu-text:hover {
 
 /* ---------------------------  Log In Pop Up Start --------------------------- */
 
-.container {
-  
-  /* transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); */
+.login-signup-container {
 
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  display: flex;
+  flex-direction: row;
   max-width: 850px;
   width: 100%;
-  padding: 30px;
   top: 0px;
   bottom: 0px;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
   background: #f2f2f2;
-  background-image: url(bg.jpg);
+/*
+  background-image: url("bg.jpg");
   background-position: center;
   background-size: 400%;
   background-position-x: -1600px;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   box-shadow: -30px 0 30px rgba(25, 29, 36, 0.2);
 
   position: fixed;
@@ -290,8 +313,9 @@ div#sidebar .menu-text:hover {
 }
 
 .form{
+  display: flex;
+  flex-direction: column;
   width: 450px;
-  margin-left: 390px;
   position: fixed;
 }
 
@@ -307,6 +331,56 @@ header {
 
 form {
   margin-top: 25px;
+}
+
+#form-close {
+  position: absolute;
+  font-size: 20px;
+  margin-left: 790px;
+  margin-top: 30px;
+  opacity: 90%;
+  z-index: 2000;
+  cursor: pointer;
+}
+
+.login-signup-block1{
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 300px;
+  align-items: center;
+  justify-content: center;
+  background-color: blueviolet;
+}
+
+.login-signup-block2{
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 550px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.login-block {
+  display: flex;
+  position: absolute;
+  height: fit-content;
+  width: 450px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.signup-block {
+  display: flex;
+  position: absolute;
+  height: fit-content;
+  width: 450px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .form .field {
@@ -349,17 +423,6 @@ form {
 .field input {
   border-bottom-width: 2px;
 }
-
-/* .eye-icon {
-    position: absolute;
-    top: 50%;
-    right: 0%;
-    transform: translateY(-50%);
-    font-size: 18px;
-    color: #8b8b8b;
-    cursor: pointer;
-    padding: 5px;
-} */
 
 .field button {
   color: #fff;
@@ -427,9 +490,8 @@ form {
 .line {
   position: relative;
   height: 1px;
-  width: 100%;
-  margin: 15px 0px;
-  margin-bottom: 35px;
+  width: 450px;
+  margin-bottom: 25px;
   background-color: #d4d4d4;
 }
 
@@ -447,9 +509,26 @@ form {
   font-family: Poppins;
   font-size: 13px;
   letter-spacing: 0.3px;
-  font-weight: 400;
+  font-weight: 600;
   color: #2b2b2b;
   opacity: 80%;
+}
+
+#media-options-block {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: fit-content;
+  width: 450px;
+}
+
+.media-options {
+  display: flex;
+  position: relative;
+  height: fit-content;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .media-options a {
@@ -558,7 +637,7 @@ a.spotify span {
 .form-link2 {
   text-align: center;
   margin-top: 25px;
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   padding-left: 30px;
 
   font-family: Montserrat;
@@ -572,9 +651,8 @@ a.spotify span {
 .line1 {
   position: relative;
   height: 1px;
-  width: 100%;
-  margin: 15px 0px;
-  margin-bottom: 30px;
+  width: 450px;
+  margin-bottom: 15px;
   background-color: #d4d4d4;
 }
 
@@ -592,338 +670,709 @@ a.spotify span {
   font-family: Poppins;
   font-size: 13px;
   letter-spacing: 0.3px;
-  font-weight: 400;
+  font-weight: 600;
   color: #2b2b2b;
   opacity: 80%;
 }
 
 /* ---------------------------  Sign Up Pop Up End --------------------------- */
 
-h1#latest-release {
-  position: absolute;
-  padding-left: 108px;
-  margin-bottom: 50px;
-  font-family: "Poppins", sans-serif;
-  font-size: 30px;
-  font-weight: 550;
-}
 
-section#banner {
-  overflow: auto;
-  position: relative;
-  height: 260px;
-  width: 100%;
-}
-
-section#banner::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: -1;
-
-  display: block;
-  background-image: url("assets/png/Background.png"),
-    linear-gradient(transparent 0%, transparent 90%, white 100%);
-  background-blend-mode: overlay;
-  background-repeat: no-repeat;
-
-  filter: blur(4px);
-  height: 260px;
-
-  background-position: center;
-
-  background-size: cover;
-  width: 100%;
-  margin-top: 50px;
-
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(0px);
-}
-
-div#banner-content {
-  padding: 55px 60px 36px 150px;
-  display: flex;
-  gap: 90px;
-}
-
-div#banner-info {
-  color: white;
-}
-
-div#banner-info img {
-  padding-top: 5px;
-  position: absolute;
-}
-
-p#banner-topic {
-  font-size: 12px;
-  letter-spacing: 1px;
-  font-family: "poppins", sans-serif;
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-color: white;
-  text-underline-offset: 10px;
-  opacity: 70%;
-  padding-left: 25px;
-  padding-top: 5px;
-  position: absolute;
-}
-
-h2#banner-heading {
-  margin-top: 40px;
-  font-family: "K2D", sans-serif;
-  font-weight: bolder;
-  padding-left: 0px;
-}
-
-p#banner-artist {
-  margin-top: 15px;
-  font-family: "Jura", sans-serif;
-  font-weight: 900;
-  padding-left: 5px;
-}
-
-div#banner-buttons {
-  margin-top: 22px;
-  padding-left: 0px;
-}
-
-div#banner-buttons button {
-  color: rgb(0, 0, 0);
-  font-family: monospace;
-  font-size: 15px;
-  font-weight: bolder;
-  padding: 1px 14px;
-  background-color: rgb(255, 255, 255);
-  border: none;
-  border-radius: 20px;
-  width: 90px;
-  height: 25px;
-
-  vertical-align: center;
-  line-height: 18px;
-}
-
-section#music-filters {
-  padding: 28px 0px 16px 200px;
-  display: flex;
-  gap: 50px;
-}
-
-.music-filter {
-  box-sizing: border-box;
-  padding: 0px 20px;
-  width: 320px;
-  height: 36px;
-  border: 4px solid #d9d9d9;
-  background: #d9d9d9;
-  border-radius: 50px;
-
-  font-size: 14px;
-  line-height: 20px;
-}
-
-div#track-type-container {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-button.filter-track-type {
-  width: 160px;
-  background: #d9d9d9;
-  border: none;
-}
-
-button#type-typical {
-  border-top-left-radius: 50px;
-  border-bottom-left-radius: 50px;
-  border-right: 1px dotted black;
-}
-
-button#type-instrumental {
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
-}
-
-section#music-selection {
-  background-color: #f2f2f2;
-  padding: 26px 40px 26px 126px;
-}
-output#selection-output {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
-  gap: 60px;
-}
-
-.song-container {
-  width: 200px;
+/* ---------------------------  Library Start --------------------------- */
+.main-container {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  height: auto;
+  width: 90%;
+  left: 105px;
+  margin-right: 50px;
+  background-color: transparent;
 }
 
-div.song-container-info {
-  padding: 4px;
+.header h1 {
+  font-size: 35px;
+  color: #191d24;
+  position: absolute;
+  margin-top: 18px;
+  text-align: left;
 }
 
-h2.song-name {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 27px;
-  letter-spacing: 0.05em;
-}
-
-h3.artist-name {
-  /* font-family: Kanit; */
-
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
-}
-
-p.song-published {
-  /* font-family: 'Rambla'; */
-  font-size: 10px;
-  line-height: 12px;
-  letter-spacing: 0.05em;
-  text-align: right;
-}
-
-div.song-container-footer {
+#banner {
   display: flex;
-  justify-content: space-between;
+  position: absolute;
+  height: 250px;
+  width: 100%;
+  margin-top: 90px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border-radius: 20px;
+
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-image: url("Blake Hills - Don't Be Shy (Cover Art).jpg");
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+#banner-content {
+  display: flex;
+  flex-direction: row;
+  padding-top: 30px;
+  -webkit-backdrop-filter: blur(1.5px);
+  backdrop-filter: blur(1.5px);
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+#banner-content:hover {
+  -webkit-backdrop-filter: blur(2.5px);
+  backdrop-filter: blur(2.5px);
+}
+
+#banner-image {
+  display: flex;
+  position: relative;
+  height: 180px;
+  width: 180px;
+  margin-left: 100px;
+  user-select: none;
+}
+
+#banner-image:hover {
+  transform: scale(1.04);
+  transition: 0.8s ease-in-out;
+}
+
+#banner-info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 10px;
+  padding-left: 80px;
+}
+
+.banner-trending {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: left;
   align-items: center;
 }
 
-div.song-container-footer * {
-  /* font-family: 'Rambla'; */
+#banner-info i{
+  width: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 90%;
+  position: relative;
+}
 
-  letter-spacing: 0.05em;
-  vertical-align: center;
+.banner-topic {
+  font-size: 14px;
+   font-family: "Oxanium", sans-serif;
+  font-weight: 550;
+  color: #fffbfb;
+  letter-spacing: 1px;
 
+  padding-left: 12px;
+  opacity: 90%;
+  position: relative;
+}
+
+#banner-heading {
+  font-size: 28px;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  color: #FFFBFF;
+  text-shadow: #000;
+
+  padding-top: 45px;
+}
+
+#banner-artist {
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #FFFBFF;
+
+  padding-top: 10px;
+}
+
+#banner-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 28px;
+}
+
+#banner-buttons button {
+  display: flex;
+  flex-direction: row;
+  height: 30px;
+  width: 110px;
+  gap: 6px;
+  border: none;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #191d24;
+  box-shadow: 0px 0px 10px 0px rgb(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+#banner-buttons button:hover {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  opacity: 98%;
+  color: #000;
+  transition: 0.6s;
+}
+
+#banner-buttons button i {
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+}
+
+#banner-buttons button:hover i {
+  color: #000;
+  font-weight: 600;
+  opacity: 98%;
+}
+
+#banner-buttons button span {
+  display: flex;
+  position: relative;
+  font-size: 12.5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+#music-library {
+  display: flex;
+  position: relative;
+  height: fit-content;
+  width: 100%;
+  margin-top: 380px;
+  flex-wrap: wrap;
+  flex-direction: column;
   border-radius: 20px;
 }
 
-button.play-button {
-  font-size: 10px;
-  line-height: 12px;
-  border: 1.7px solid #000000;
-  height: 20px;
+.filter-area {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  padding-top: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
 }
 
-p.genre-label {
-  background: #d9d9d9;
-  border-radius: 100px;
-  height: 16px;
-  padding: 0px 6px;
-  font-size: 10px;
-  line-height: 15px;
+.music-filter-name {
+  display: flex;
+  position: relative;
+  height: 42px;
+  width: 280px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f6f9;
 }
+
+.music-filter-name i {
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.music-filter-name input {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #191d24;
+  letter-spacing: 0.5px;
+
+  width: 70%;
+  padding: 0 25px 0 15px;
+  outline: none;
+  border: none;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.music-filter-genre {
+  display: flex;
+  position: relative;
+  height: 42px;
+  width: 280px;
+  margin-bottom: 15px;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f6f9;
+}
+
+.music-filter-genre i {
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.music-filter-genre select {
+  display: flex;
+  height: 42px;
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #191d24;
+  letter-spacing: 0.5px;
+
+  width: 85%;
+  padding: 0 25px 0 15px;
+  outline: none;
+  border: none;
+  background: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.music-filter-special {
+  display: flex;
+  position: relative;
+  height: 42px;
+  width: 280px;
+  margin-bottom: 15px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #f1f6f9;
+}
+
+.track-type {
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #f1f6f9;
+  cursor: pointer;
+  user-select: none;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #191d24;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.track-type:hover {
+  background-color: rgb(29, 29, 29);
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+.track-type input {
+  position: absolute;
+  opacity: 0%;
+}
+
+#grid-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  gap: 5%;
+  border-radius: 20px;
+  justify-content: center;
+  background-color: #e9f0f3;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.slider {
+  position: relative;
+  height: fit-content;
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 5.75%;
+  justify-content: left;
+}
+
+.track-block {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 230px;
+  height: 380px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.details-bar {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: fit-content;
+  width: 230px;
+  text-decoration: none;
+}
+
+.upper-area div {
+  display: flex;
+  position: relative;
+  height: 230px;
+  width: 230px;
+  border-radius: 10px;
+  background-size: cover;
+}
+
+.upper-area div:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+}
+
+.lower-area {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: fit-content;
+  width: 200px;
+  margin-top: 10px;
+}
+
+.lower-area p {
+  display: flex;
+  position: relative;
+  height: 22px;
+  width: 200px;
+  padding-top: 10px;
+
+  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  color: #191d24;
+}
+
+.lower-area span {
+  display: flex;
+  position: relative;
+  width:200px;
+  padding-top: 4px;
+
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #000;
+  opacity: 80%;
+}
+
+.track-options {
+  display: flex;
+  position: relative;
+  height: fit-content;
+  justify-content: space-between;
+  align-items: end;
+  margin-top: 22px;
+  cursor: pointer;
+}
+
+.track-details {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.track-details p {
+  font-size: 12px;
+  font-family: "Oxanium", sans-serif;
+  font-weight: 500;
+  color: #000;
+  opacity: 85%;
+}
+
+.track-details span {
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  text-wrap: wrap;
+  color: #000;
+  opacity: 95%;
+
+  width: 130px;
+  margin-top: 8px;
+}
+
+.track-play {
+  display: flex;
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.track-play button {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 26px;
+  width: 68px;
+  padding-bottom: 2px;
+
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #232323;
+  border-radius: 8px;
+  color: #191d24;
+  opacity: 90%;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.track-play button:hover {
+  color: #fff;
+  border: none;
+  background-color: #191d24;
+  transition: 0.5s;
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 1);
+}
+
+.track-play i {
+  font-size: 15px;
+}
+
+.track-play span {
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  padding-left: 5px;
+}
+
+#pagination {
+  position: relative;
+  display: flex;
+  height: fit-content;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 80px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  gap: 5%;
+  border-radius: 20px;
+  justify-content: center;
+  background-color: #e9f0f3;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.pag-block {
+  position: relative;
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pag-box {
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.pag-box:active {
+  transform: scale(0.9);
+}
+
+.number:focus {
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+}
+
+.pag-box img {
+  height: 20px;
+  opacity: 90%;
+}
+
+.pag-box span {
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+/* ---------------------------  Library End --------------------------- */
+
 
 /* ---------------------------  Music Bar Start --------------------------- */
 
 .music-bar {
   display: flex;
+  position: fixed;
+  flex-direction: row;
   width: 100%;
-  height: 17px;
-  padding: 30px;
+  height: 75px;
   margin-left: 70px;
   bottom: 0px;
+  align-items: center;
   background: #191d24;
-  position: fixed;
+  transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.music-bar h1 {
-  font-family: 'Kanit', sans-serif;
-  color: #ffffff;
-  font-weight: 400;
-  font-size: 21px;
-  padding-left: 180px;
-  margin-top: -14px;
-  opacity: 85%;
-  position: fixed;
-}
-
-.music-bar h4 {
-  font-family: 'Kanit', sans-serif;
-  color: #ffffff;
-  font-weight: 300;
-  font-size: 13px;
-  padding-left: 180px;
-  margin-top: 16px;
-  opacity: 85%;
-  position: fixed;
+.bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  align-items: center;
 }
 
 div .music-bar-img img {
-  width: 130px;
+  width: 140px;
   height: auto;
-  position: fixed;
-  margin-left: 15px;
-  bottom: 15px;
+  position: relative;
+  margin-left: 40px;
+  bottom: 50px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
   border-radius: 10px;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition-delay: 0.4s;
   pointer-events: none;
   user-select: none;
 }
 
-div .bar-download {
-  width: 100px;
-  height: 27px;
-  border-radius: 50px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: white;
-  background-color: #ffffff00;
-  opacity: 80%;
-  cursor: pointer;
-  text-align: center;
-
-  position: fixed;
-  bottom: 20px;
-  right: 0 !important;
-  overflow-y: auto;
-  margin-right: 40px;
+.bar-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  align-items: center;
 }
 
-div .bar-download .bar-down {
-  font-size: 13px;
+.bar-details {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 250px;
+  height: 100%;
+  bottom: 0px;
+  text-align: left;
+  justify-content: center;
+}
+
+.music-bar h1 {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
   font-weight: 600;
-  font-family: 'poppins';
-  letter-spacing: 0.5px;
-  color: rgb(255, 255, 255);
+  font-size: 18px;
+  padding-left: 40px;
+  opacity: 85%;
   position: relative;
-  bottom: -5px;
+}
+
+.music-bar h4 {
+  font-family: 'Oxanium', sans-serif;
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  padding-left: 40px;
+  margin-top: 9px;
+  opacity: 80%;
+  position: relative;
+}
+
+.controls-left {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 90px;
+  height: 100%;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .playbutton-bar {
-  width: 20px;
-  z-index: 9999;
-  bottom: 10px;
-  padding-left: 500px;
-  padding-bottom: 20px;
-  position: absolute;
+  display: flex;
+  width: 18px;
+  font-size: 27px;
+  color: #fff;
+  position: relative;
+  opacity: 85%;
+  cursor: pointer;
 }
 
 .pausebutton-bar {
-  width: 20px;
-  z-index: 9998;
-  bottom: 10px;
-  padding-left: 500px;
-  padding-bottom: 20px;
-  position: absolute;
+  display: none;
+  width: 18px;
+  font-size: 29px;
+  color: #fff;
+  position: relative;
+  opacity: 85%;
+  cursor: pointer;
+}
+
+.stopbutton-bar{
+  display: flex;
+  width: 18px;
+  font-size: 27px;
+  color: #fff;
+  position: relative;
+  opacity: 85%;
+  cursor: pointer;
 }
 
 .bar-time {
-  z-index: 100;
-  bottom: 10px;
-  padding-left: 500px;
-  padding-bottom: 20px;
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 60px;
+  height: 100%;
+  bottom: 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.bar-time-start {
+  position: relative;
+  cursor: none;
+  user-select: none;
 
   color: white;
   font-family: 'Kanit', sans-serif;
@@ -936,16 +1385,263 @@ div .bar-download .bar-down {
 .wave {
   display: flex;
   flex-direction: column;
-  background-color: #016dcb;
-  z-index: 100;
-  bottom: 30px;
-  left: 500px;
-  width: 40px;
-  position: fixed;
+  width: 400px;
+  z-index: 12;
+  position: relative;
 }
 
 #waveform {
   margin-top: 15px;
 }
+
+.bar-time-end {
+  position: relative;
+  cursor: none;
+  user-select: none;
+
+  color: white;
+  font-family: 'Kanit', sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.controls-right {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 50px;
+  height: 100%;
+  bottom: 0px;
+  z-index: 11;
+  justify-content: center;
+  align-items: center;
+}
+
+.volumeunmute-bar {
+  display: flex;
+  width: 18px;
+  font-size: 20px;
+  color: #fff;
+  position: relative;
+  opacity: 85%;
+  cursor: pointer;
+}
+
+.volumemute-bar {
+  display: none;
+  width: 18px;
+  font-size: 20px;
+  color: #fff;
+  position: relative;
+  opacity: 85%;
+  cursor: pointer;
+}
+
+.bar-track-down {
+  display: flex;
+  position: relative;
+  width: 270px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 12;
+  right: 0 !important;
+  overflow-y: auto;
+  margin-right: 70px;
+}
+
+div .bar-download {
+  width: 120px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  border-radius: 50px;
+  border: 2px solid #f1f6f9;
+  opacity: 85%;
+  cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+.bar-download.active {
+  height: 8px;
+  width: 150px;
+  border: 1.9px solid #fff;
+}
+
+.bar-download::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  border-radius: 50px;
+  background-color: #444;
+}
+
+.bar-download.active::before {
+  animation: layer 6s ease-in-out forwards;
+}
+
+@keyframes layer {
+  100% {
+    left: 0%;
+  }
+}
+
+.bar-down-content{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  transition:  all 0.2s ease;
+  transition-delay: 0.2s;
+  pointer-events: none;
+  user-select: none;
+}
+
+.bar-download.active .bar-down-content{
+  transform: translateY(60px);
+}
+
+.bar-down-content .bar-down,
+.bar-down-content i {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'poppins';
+  letter-spacing: 0.5px;
+  color: #fff;
+  position: relative;
+}
+
+.bar-down-content i {
+  font-size: 15px;
+}
+
+/* -----  Volume Bar Start ----- */
+
+  .volume {
+    position:fixed;
+    display: flex;
+    margin-left: 750px;
+    bottom: 20px;
+    width: 280px;
+    height: 55px;
+    z-index: 10;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .volume-area {
+    position:fixed;
+    display: flex;
+    bottom: 75px;
+    width: 280px;
+    height: 80px;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  
+  .volume-box {
+    position: absolute;
+    display: flex;
+    width: 280px;
+    height: 40px;
+    bottom: 70px;
+    justify-content: center;
+    align-items: center;
+    background: #191d24;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .spinner {
+    position: relative;
+    height: 30px;
+    gap: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    user-select: none;
+  }
+
+  .progress {
+    position: relative;
+    width: 150px;
+    background: #333333;
+    height: 8px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .progress #meter {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #f00;
+    border-radius: 20px;
+    filter: drop-shadow(0 0 2.5px #0f0) drop-shadow(0 0 10px #0f0);
+    transition: 0.5s;
+    overflow: hidden;
+  }
+
+  .btn {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    text-justify: auto;
+    line-height: 20px;
+    background: #444;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 50%;
+    text-shadow: 0 0 5px #fff, 0 0 10px ffffff60;
+    cursor: pointer;
+    font-weight: 600;
+    opacity: 90%;
+  }
+
+  .minus {
+    line-height: 18px;
+    font-size: 20px;
+  }
+
+  .minus:active {
+    font-size: 24px;
+  }
+
+  .btn:active{
+    font-size: 20px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.9);
+  }
+
+  #output {
+    position: relative;
+    color: #fff;
+    opacity: 90%;
+    font-size: 12px;
+    font-weight: 600;
+    text-shadow: 0 0 5px #ffffff48;
+  } 
+
+/* -----  Volume Bar End ----- */
+
 /* ---------------------------  Music Bar End --------------------------- */
 
