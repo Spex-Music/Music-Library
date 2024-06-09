@@ -2,22 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" type="module"></script>
-
-    <title>Music Library</title>
-    <link rel="icon" type="image/x-icon" href="assets/png/spexlogo.png">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="../reset.css" />
-    <link rel="stylesheet" href="../navbar/navbar.css" />
-    <link rel="stylesheet" href="../login/login.css" />
-
-    <!-- Boxicons CSS -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <?php include "../head.html"; ?>
 
     <!--  Waveform link-->
      <script src="../navbar/navbar.js"></script>
