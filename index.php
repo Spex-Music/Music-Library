@@ -10,7 +10,12 @@
 </head>
 
 <body>  
-
+    <?php 
+      include "../navbar/navbar.php";
+      echo navbar();
+      include "../login/login.php";
+      echo login();
+    ?>
     <main>
 
 <!--              Music Library Start              -->    
