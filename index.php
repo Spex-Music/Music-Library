@@ -5,16 +5,14 @@
     <?php include "../head.html"; ?>
 
     <!--  Waveform link-->
-     <script src="../navbar/navbar.js"></script>
+
 
 </head>
 
 <body>  
     <?php 
       include "../navbar/navbar.php";
-      echo navbar();
       include "../login/login.php";
-      echo login();
     ?>
     <main>
 
