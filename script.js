@@ -292,38 +292,3 @@ barDownload.addEventListener("click", ()=>{
 
   },6000) //1s = 1000ms
 })
-
-
-// ----------------------    Side Bar, Login & Sign Up Start   ----------------------
-
-const loginSignupBlock = document.getElementById('login-signup-block');
-const loginBtn = document.getElementById('login-btn');
-const spexLogin = document.getElementById('spex-login');
-const signupLink = document.getElementById('signup-link');
-const spexSignup = document.getElementById('spex-signup');
-const loginLink = document.getElementById('login-link');
-const formClose = document.getElementById('form-close');
-
-loginBtn.onclick= function() {
-  loginSignupBlock.style.transform = "translateX(0%)";
-}
-
-signupLink.onclick= function() {
-  spexSignup.style.left = "10%";
-  spexLogin.style.left = "110%";
-}
-
-loginLink.onclick= function() {
-  spexLogin.style.left = "10%";
-  spexSignup.style.left = "110%";
-}
-
-formClose.onclick= function() {
-  loginSignupBlock.style.transform = "translateX(110%)";
-  spexSignup.style.left = "110%";
-  spexLogin.style.left = "10%";
-}
-
-
-// ----------------------    Side Bar, Login & Sign Up End   ----------------------
-
